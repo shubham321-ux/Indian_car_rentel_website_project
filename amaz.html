@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			with: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		#nav{
+			width:100%;
+			height: 70px;
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			z-index:100;
+
+
+		}
+		#nav h3{
+			font-size: 1vw;
+		}
+		#nav-items{
+             display: flex;
+             align-items: center;
+             gap: 4vw;
+             font-family: sans-serif;
+             font-size: 2vw;
+		}
+		#nav-items img{
+			width: 4vw;
+			height: 5vh;
+			
+			
+		}
+		#nav #img-2{
+			width: 3vw;
+			height: 6vh;
+			margin-right: 2vw;
+		}
+		#nav #img-2:hover{
+		    background-color:magenta;
+		    border-radius: 40%;
+		}
+		#nav-items a{
+			text-decoration: none;
+			color: white;
+		}
+		 #nav-items h3:hover{
+			color:red;
+		}
+		#car{
+			width: 100%;
+			height: calc(100% - 70px);
+			background-image: url("https://imgd.aeplcdn.com/0x0/n/cw/ec/45951/amaze-facelift-exterior-right-front-three-quarter.jpeg?isig=0");
+			background-size: cover;
+			display: flex;
+
+		}
+		#prize{
+			width:25vw;
+			height:20vh;
+			background-color: rgba(0, 25, 50, 0.7);
+			position: relative;
+			left:65%;
+			top:77.5%;
+			color: white;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+
+		}
+		#prize h1{
+			font-size: 6vw;
+		}
+		#prize p{
+			font-size: 3vw;
+		}
+		#prize select{
+			width: 6vw;
+			text-decoration: none;
+			background-color: transparent;
+			color: white;
+			border: none;
+		}
+		#main{
+			width: 100%;
+			min-height: 100%;
+			background-color: transparent;
+			display: flex;
+		}
+		#main #part1{
+			width: 60%;
+			min-height: 100%;
+			margin-top: 10px;
+			display: flex;
+			flex-direction:column;
+			align-items: center;
+		}
+		#review{
+			width:50vw;
+			height: 20vh;
+			background-color:transparent;
+			margin-top: 10px;
+		}
+		#review img{
+			mix-blend-mode:color-burn
+			width:40vw;
+			height: 10vh;
+		}
+		#about{
+			width: 50vw;
+			min-height: 20vh;
+			background-color:transparent;
+			margin-top: 10px;
+			border-bottom: 2px solid  black;
+			border-top: 2px solid  black;
+			display: flex;
+			justify-content:space-between;
+			align-items: center;
+		}
+		#about img{
+            width:4vw;
+            height: 6vh;
+            /*mix-blend-mode: color-burn;*/
+		}
+		#about img:nth-child(2){
+			height:10vh;
+		}
+		#text{
+			width:50vw;
+			min-height: 40vh;
+			background-color:transparent;
+			margin-top: 10px;
+		}
+		#text h1{
+           font-style:4vw;
+		}
+		#text p{
+			font-size: 1.5vw; 
+		}
+		#main #part2{
+			width: 40%;
+			min-height: 100%;
+			margin-top: 10px;
+			display: flex;
+			justify-content: center;
+		}
+		#main #part2 #form{
+			padding: 2px;
+			width: 80%;
+			min-height: 400px;
+			margin-top: 10px;
+			border-radius: 7px;
+			border: 1px solid black;
+			background-color:transparent;
+			padding: 0 2px;
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			
+			
+
+		}
+		#form label{
+			font-size: 1.1vw;
+			font-weight:bold;
+			text-align: left;
+
+		}
+		#form input{
+			width: 30vw;
+			height: 7vh;
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 5px;
+
+		}
+		#form input::placeholder{
+			font-size: 1.1vw;
+			text-align:left;
+		}
+		#form input[type="date"],input[type="time"]{
+			font-size: 1.1vw;
+			opacity: 0.9;
+		}
+		#form #button1{
+			text-align: center;
+			width: 30vw;
+			height: 7vh;
+            background-color: #E6E6FA;
+            border: 1px solid black;
+            border-radius: 5px;
+		}
+		#form #button2{
+			text-align: center;
+			width: 30vw;
+			height: 7vh;
+            background-color:  #34D399;
+            border: 1px solid black;
+            border-radius: 5px;
+		}
+		#form #alert{
+			text-align: center;
+			width: 30vw;
+			min-height: 10vh;
+            background-color:transparent;
+            border-top: 1px solid black;
+            }
+
+		#form #alert img{
+			width: 50px;
+			height: 50px;
+            position: relative;
+            top: 27%;
+		}
+		#main3-box2{
+			width: 100%;
+			min-height: 250px;
+			background-color:transparent;
+			border-bottom: 1px solid white;
+			
+
+		}
+		#brand5{
+           width:100%;
+           min-height:280px;
+           background-color:black;
+           display: flex;
+           justify-content: space-evenly;
+           align-items:;
+           color: white;
+
+		}
+		#box5{
+			width: 290px;
+			height: 260px;
+			background-color:transparent;
+			border-radius: 10px;
+			text-align: left;
+			font-family: sans-serif;
+		}
+		#box5 img{
+            width: 200px;
+            height: 50px;
+     
+		}
+		#box5 input{
+			width: 280px;
+			height: 40px;
+			border-radius:8px;
+			border: none;
+		}
+		#box5 button{
+			width: 280px;
+			height: 40px;
+			border-radius:8px;
+			border: none;
+			background-color: #34D399;
+		}
+		
+		@media (max-width:600px){
+			#nav{
+				top:0;
+			}
+
+			#nav img:nth-child(1){
+				width: 38vw;
+				height: 4vh;
+			}
+			 #nav #nav-items img{
+				width: 10vw;
+				height: 6vh;
+
+			}
+			#nav h3{
+				display: none;
+			}
+			#car{
+				background-size: cover;
+				background-position: center;
+			}
+			#prize{
+				width: 40vw;
+				height: 10vh;
+				top: 88%;
+				left: 59%;
+			}
+			#prize select{
+              width: 5vw;
+			}
+			#prize h1{
+				font-size: 14vw;
+			}
+			#prize p{
+				font-size: 7vw;
+			}
+			#main{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			#main #part1{
+				width: 80%;
+			}
+			
+			#main #review ,#about,#text{
+				width: 70vw;
+			}
+			#main #part1 #about{
+               flex-direction: column;
+               min-height: 10vh;
+			}
+			#main #part1 #text p{
+				font-size: 3.5vw;
+
+			}
+			#about img{
+				width:5vw;
+				height: 5vh;
+				justify-content:space-evenly;
+				align-items:left;
+			}
+			#text p{
+				font-size:3vw; 
+			}
+			#main #part2 {
+				width:85%;
+			}
+			#main #part2 label{
+				font-size: 4vw;
+			}
+			#main #part2 input{
+				width:60vw;
+				height: 5vh;
+			}
+			#main #part2 input::placeholder{
+				font-size: 4vw;
+				text-align: center;
+			}
+			#main #part2 input[type="date"],input[type="time"]{
+				font-size: 4vw;
+			}
+			#main #part2 button{
+				width:60vw;
+				height: 5vh;
+			}
+
+			
+			#brand5{
+				display: flex;
+				flex-direction:column ;
+				align-items: center;
+			}
+
+		}
+
+		
+		
+	</style>
+</head>
+<body>
+<!-- nav sction -->
+	<div id="nav">
+		<div id="nav">
+			<img src="https://grandcarrentalv1.b-cdn.net/wp-content/themes/grandcarrental/images/logo@2x_white.png">
+			<div id="nav-items">
+				<h3><a href="rentel.html">Home</a></h3>
+				<h3><a href="#">Car</a></h3>
+				<h3><a href="#">Booking</a></h3>
+				<h3><a href="#">Page</a></h3>
+				<h3><a href="#">Blog</a></h3>
+				<h3><a href="#">Shortcut</a></h3>
+				<h3><a href="#">Shop</a></h3>
+				<img id="img-2" src="https://cdn-icons-png.flaticon.com/128/545/545806.png">
+				
+			</div>
+		</div>
+
+	</div>
+
+<!-- car section -->
+<div id="car">
+	<div id="prize">
+		<p>₹</p>
+		<h1 id="per">500</h1>
+		<select onclick="hour()" id="dayhour">
+			<option>Per Day</option>
+			<option>Per Hour </option>
+		</select>
+	</div>
+</div>
+
+<!-- 
+main detail and form sction -->
+<div id="main">
+	<div id="part1">
+		<div id="review">
+			<h1>Review</h1>
+			<img src="https://img.freepik.com/premium-vector/three-fat-golden-stars-with-shadows-excellent-quality-rating_91645-212.jpg?size=626&ext=jpg&ga=GA1.1.2018153848.1682191017&semt=ais">
+		</div>
+		<div id="about">
+			<h3><img src="https://logodix.com/logo/444564.jpg">4 Passenger</h3>
+			<h3><img src="https://t3.ftcdn.net/jpg/01/41/40/76/240_F_141407683_AmOuBtIH59zvyi1T9t0ZqZaMyYL0YGFY.jpg">2 Luggages</h3>
+			<h3><img src="https://cdn.vectorstock.com/i/preview-1x/93/61/car-gear-temperature-icon-simple-auto-vector-43559361.webp">Auto</h3>
+			<h3><img src="https://www.shutterstock.com/image-vector/car-icon-600w-367112558.jpg">5 Doors</h3>
+		</div>
+		<div id="text">
+			<h1>Refuelling</h1>
+			<p>Fuel efficient cars are a mix between electric cars and hybrid cars which means that the amount of gasoline combusted is reduced since they are powered on a combination of both electric and gasoline motors. These fuel efficient cars are therefore of great importance since their efficiencies leads to a reduction in the amount of gas utilized which further translates to reduced cost of gas. On a long-term, it is also beneficial because the maintenance cost and state or federal charges remain the same while the license and company tax go down, providing consumers with incentive to drive fuel efficient cars. Both of these taxes are based on the amount of carbon dioxide emissions released by the vehicle</p>
+		</div>
+		<div id="text">
+			<h1>Car Wash</h1>
+			<p>Wipe Down All Surfaces Now you need to wipe down all the surfaces in your vehicle. Do this before you vacuum so that any loose dirt you dislodge can be vacuumed up later. Start at the top of your vehicle and work your way down so that dust falls down as you work. For example, start by wiping down the visors and the lights on the ceiling of your vehicle, then wipe down the dashboard and consoles, followed by the doors and lower compartments. Don’t forget to clean the area where the door meets the vehicle; this area is often overlooked and can be quite</p>
+		</div>
+		<div id="text">
+			<h1>No Smoking</h1>
+			<p>Parents should not smoke when driving around with their children. The health effects of smoking have been much documented. The health implications of children being exposed to secondhand smoke by their parents become even more apparent in enclosed places like inside vehicles. Thus, children should be saved the indignity and unfairness of being exposed to the harmful effects of a habit they themselves are not partaking. This essay is meant to support the contention that smoking in cars should be banned by giving the reasons why; even though there are others who are opposed to the ban.</p>
+		</div>
+
+
+		
+
+	</div>
+	<div id="part2">
+		<div id="form">
+			<label>Full Name </label>
+			<input type="text" name="user name" placeholder="Enter Your Name "><br><br>
+			<label>Email Adress</label>
+			<input type="email" name="user gmail" placeholder="Enter Your Gmail"><br><br>
+			<label>Phone Number </label>
+			<input type="text" name="phone number" placeholder="Enter Your contact "><br><br>
+			<label>Pickup Adress</label>
+			<input type="text" name="Adress" placeholder="Type Your Pickup Adress"><br><br>
+			<label>Pickup Date </label>
+			<input type="Date" name="date" ><br><br>
+			<label>Pickup Time</label>
+			<input type="Time" name="time"><br><br>
+			<label>Drop Date </label>
+			<input type="Date" name="date" ><br><br>
+			<label>Drop Time</label>
+			<input type="Time" name="time"><br><br>
+			<button id="button1">Request For Booking</button><br>
+			<h2>OR</h2><br>
+			<button id="button2">Book INstantly</button><br><br>
+			<div id="alert">This car's been viewed 544 times in the past week<img src="https://img.freepik.com/premium-vector/wall-clock-logo-icon_414847-367.jpg"></div>
+
+
+
+
+
+
+
+		</div>
+	</div>
+</div><br><br>
+<div id="main3-box2">
+			<div id="brand5">
+			<div id="box5">
+				<h2>About Us</h2><br>
+				<p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience.</p><br><br>
+				<img src="https://grandcarrentalv1.b-cdn.net/wp-content/themes/grandcarrental/images/logo@2x_white.png">
+			</div>
+		    <div id="box5">
+		    	<h2>Contact Us</h2><br>
+		    	<p>88943-81093</p><br>
+		    	<p>main street Palampur</p><br>
+		    	<p>mon - sat 8.00AM - 9.00PM Sunday closed</p>
+		    </div>
+		    <div id="box5">
+		    	<h2>NewsLetter</h2><br>
+		    	<p>Don't miss a thing! Sign up to receive daily deals </p><br>
+		    	<input type="email" name="mail" placeholder="your Gmail"><br><br>
+		    	<button>subscrible</button>
+		    </div>
+
+		</div>
+		</div>
+<script type="text/javascript">
+	const hour=()=>{
+		document.getElementById("per").innerHTML=80;
+
+	}
+	const day=()=>{
+		document.getElementById("per").innerHTML=500;
+	
+</script>
+
+
+
+</body>
+</html>

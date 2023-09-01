@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+		}
+		 a{
+			text-decoration: none;
+
+		}
+		a:hover{
+			opacity: 0.6;
+		}
+		#main{
+			width: 100%;
+			min-height:calc(100% - 70px);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-image:url("https://c0.wallpaperflare.com/preview/519/872/867/person-driving-on-driver-s-seat.jpg");
+			background-size:cover;
+			color: white;
+
+		}
+		#main h1{
+			
+			text-align: center;
+			font-size: 6vw;
+			font-family: sans-serif;
+
+		}
+		#main h1 span{
+			 color: #7FFFD4;
+		}
+		#main p{
+
+			text-align: center;
+			font-size: 20px;
+			font-family: sans-serif;
+			line-height: 6vh;
+
+		}
+		#main-sl{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2vw;
+						
+		}
+		#main-sl select{
+			width: 250px;
+			height: 40px;
+			border-radius: 8px;
+			gap: 1vw;
+			
+		}
+		#main-sl button{
+			width: 250px;
+			height: 40px;
+			border-radius: 8px;
+			background-color: #15f4ee;
+			border:none;
+		}
+		#nav{
+			width:100%;
+			height: 70px;
+			background-color:rgba(0, 0, 0, 0.5);
+			
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+			z-index:100;
+
+
+		}
+		#nav h3{
+			font-size: 1vw;
+		}
+		#nav-items{
+             display: flex;
+             align-items: center;
+             gap: 4vw;
+             font-family: sans-serif;
+             font-size: 2vw;
+		}
+		#nav-items img{
+			margin-left:4vw;
+			width: 4vw;
+			height: 5vh;
+			
+			
+		}
+		#nav #img-2{
+			width: 3vw;
+			height: 6vh;
+			margin-right: 2vw;
+		}
+		#nav #img-2:hover{
+		    background-color:magenta;
+		    border-radius: 40%;
+		}
+		#nav-items a{
+			text-decoration: none;
+			color: white;
+		}
+		 #nav-items h3:hover{
+			color:red;
+		}
+		#mian #nav-items img:nth-child(2){
+			mix-blend-mode:color-burn;
+		}
+		#main2{
+			width: 100%;
+			min-height:100%;
+			background-color:white;
+			color: white;
+		}
+		#main2 h1{
+			font-size: 3vw;
+		}
+		#main2 p{
+			font-size: 1.2vw;
+		}
+		#main2 h2{
+			color:#39414D;
+			font-family: sans-serif;
+			font-size:30px; 
+		}
+		#text{
+			width: 100%;
+			min-height: 100px;
+			background-color: transparent;
+			font-family: sans-serif;
+			text-align: center;
+			color: black;
+
+		}
+		#brand{
+           width:100%;
+           min-height: height 280px;
+           background-color:transparent;
+           display: flex;
+           justify-content: space-evenly;
+           align-items:;
+
+		}
+		#box-1{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://wallpaperaccess.com/full/2825484.jpg");
+			background-size: cover;
+			z-index: 1;
+		}
+		#brand a:hover{
+			opacity: 0.6;
+
+		}
+		#box-2{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://w0.peakpx.com/wallpaper/184/734/HD-wallpaper-suzuki-maruti-suzuki-brezza-thumbnail.jpg");
+			background-size: cover;
+		}
+		#box-3{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://w0.peakpx.com/wallpaper/15/355/HD-wallpaper-tata-harrier-attractive-beautiful-car-harrier-lightning-purple-tata-thunder-thumbnail.jpg");
+			background-size: cover;
+		}
+		/*#box:nth-child(1){
+			background-image: url("https://wallpaperaccess.com/full/2825484.jpg");
+			background-size: cover;
+		}
+		#box:nth-child(2){
+			background-image:url("https://w0.peakpx.com/wallpaper/184/734/HD-wallpaper-suzuki-maruti-suzuki-brezza-thumbnail.jpg");
+			background-size:cover;
+		}
+		#brand :nth-child(2){
+			background-image: url("https://w0.peakpx.com/wallpaper/184/734/HD-wallpaper-suzuki-maruti-suzuki-brezza-thumbnail.jpg");
+			background-size: cover;
+		}
+		#box:nth-child(3){
+			background-image: url("https://w0.peakpx.com/wallpaper/15/355/HD-wallpaper-tata-harrier-attractive-beautiful-car-harrier-lightning-purple-tata-thunder-thumbnail.jpg");
+			background-size:cover;
+		}*/
+		#brand2{
+           width:100%;
+           min-height:280px;
+           background-color:transparent;
+           display: flex;
+           justify-content: space-evenly;
+           margin-top: 2vh;
+
+		}
+		#brand2 a:hover{
+			opacity: 0.6;
+		}
+		#box2-1{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://e1.pxfuel.com/desktop-wallpaper/905/697/desktop-wallpaper-toyota-fortuner-13-1254-x-630-fortuner-black-thumbnail.jpg");
+			background-size: cover;
+		}
+		#box2-2{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://wallpaperaccess.com/full/207038.jpg");
+			background-size: cover;
+		}
+		#box2-3{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://images.unsplash.com/photo-1625037669052-7e033716f325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2lhfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+			background-size: cover;
+		}
+		/*#box2:nth-child(1){
+			background-image: url("https://e1.pxfuel.com/desktop-wallpaper/905/697/desktop-wallpaper-toyota-fortuner-13-1254-x-630-fortuner-black-thumbnail.jpg");
+			background-size: cover;
+		}
+		#box2:nth-child(2){
+			background-image: url("https://wallpaperaccess.com/full/207038.jpg");
+			background-size: cover;
+		}
+		#box2:nth-child(3){
+			background-image: url("https://images.unsplash.com/photo-1625037669052-7e033716f325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2lhfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+			background-size:cover;
+		}*/
+		#text2{
+			width: 100%;
+			min-height: 100px;
+			background-color: transparent;
+			font-family: sans-serif;
+			text-align: center;
+			color: black;
+
+		}
+		#brand3{
+           width:100%;
+           min-height:280px;
+           background-color:transparent;
+           display: flex;
+           justify-content: space-evenly;
+           align-items:;
+
+		}
+		#brand3 a:hover{
+			opacity: 0.6;
+
+		}
+		#box3-1{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://w0.peakpx.com/wallpaper/766/13/HD-wallpaper-toyota-suv-fortuner-thumbnail.jpg");
+			background-size: cover;
+		}
+		#box3-2{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/8703/1679389180298/front-left-side-47.jpg?impolicy=resize&imwidth=420");
+			background-size: cover;
+		}
+		#box3-3{
+			width: 270px;
+			height: 250px;
+			background-color: #F0F8FF;
+			border-radius: 10px;
+			background-image: url("https://w0.peakpx.com/wallpaper/468/210/HD-wallpaper-tata-safari-storme-jungle-2015-cars-suvs-offroad-2015-tata-safari-storme-indian-cars-tata-thumbnail.jpg");
+			background-size: cover;
+		}
+		/*#box3:nth-child(1){
+			background-image: url("https://w0.peakpx.com/wallpaper/766/13/HD-wallpaper-toyota-suv-fortuner-thumbnail.jpg");
+			background-size: cover;
+		}
+		#box3:nth-child(2){
+			background-image: url("https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/8703/1679389180298/front-left-side-47.jpg?impolicy=resize&imwidth=420");
+			background-size: cover; 
+			}
+		#box3:nth-child(3){
+			background-image: url("https://w0.peakpx.com/wallpaper/468/210/HD-wallpaper-tata-safari-storme-jungle-2015-cars-suvs-offroad-2015-tata-safari-storme-indian-cars-tata-thumbnail.jpg");
+			background-size:cover;
+		}
+*/		
+		#main3{
+			width: 100%;
+			min-height:100%;
+			background-color:black;
+			color: white;
+		}
+		#main2 h1{
+			font-size: 3vw;
+		}
+		#main2 p{
+			font-size: 1.2vw;
+		}
+		#main3-box{
+			width: 100%;
+			min-height: 400px;
+			background-color:magenta;
+		}
+		#text2{
+			width: 100%;
+			min-height: 100px;
+			background-color: transparent;
+			font-family: sans-serif;
+			text-align: center;
+			color: white;
+
+		}
+		#brand4{
+           width:100%;
+           min-height:280px;
+           background-color:transparent;
+           display: flex;
+           justify-content: space-evenly;
+           align-items:;
+
+		}
+		#box4{
+			width: 270px;
+			height: 250px;
+			background-color:transparent;
+			border-radius: 10px;
+			text-align: center;
+			font-family: sans-serif;
+		}
+		#box4 img{
+			width: 50px;
+			height: 50px;
+			mix-blend-mode:color-burn;
+						
+		}
+		#main3-box2{
+			width: 100%;
+			min-height: 250px;
+			background-color:transparent;
+			border-bottom: 1px solid white;
+			
+
+		}
+		#brand5{
+           width:100%;
+           min-height:280px;
+           background-color:transparent;
+           display: flex;
+           justify-content: space-evenly;
+           align-items:;
+
+		}
+		#box5{
+			width: 290px;
+			height: 260px;
+			background-color:transparent;
+			border-radius: 10px;
+			text-align: left;
+			font-family: sans-serif;
+		}
+		#box5 img{
+            width: 200px;
+            height: 50px;
+     
+		}
+		#box5 input{
+			width: 280px;
+			height: 40px;
+			border-radius:8px;
+			border: none;
+		}
+		#box5 button{
+			width: 280px;
+			height: 40px;
+			border-radius:8px;
+			border: none;
+			background-color: #34D399;
+		}
+		#main3-box3{
+			width: 100%;
+			height: 100px;
+			background-color:transparent;
+		}
+		@media (max-width: 600px){
+			#main h1{
+				font-size: 7.5vw;
+			}
+			
+
+			#nav img:nth-child(1){
+				width: 38vw;
+				height: 4vh;
+			}
+			 #nav #nav-items img{
+				width: 10vw;
+				height: 6vh;
+
+			}
+			#nav h3{
+				display: none;
+			}
+
+			#main{
+				
+			}
+			#main-sl{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 8vh;
+			flex-direction: column;
+						
+		}
+		#main2{
+			background-color:transparent;
+		}
+		#main2 h1{
+			font-size: 4vw;
+		}
+		#main2 p{
+			font-size: 3vw;
+		}
+		#brand{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 10vh;
+		}
+		#box{
+
+		}
+		#brand2{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 10vh;
+			margin-top: 2.5vh;
+		}
+		#box2{
+
+			
+		}
+		#brand3{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 10vh;
+			margin-bottom: 2.5vh;
+		}
+		#box3{
+			
+		}
+		#brand4{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 10vh;
+		}
+		#box4{
+
+		}
+		#brand5{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 10vh;
+		}
+		#box5{
+
+		}
+		#box5 h2{
+			text-align: center;
+		}
+
+			
+		 
+		}
+	</style>
+		
+		
+</head>
+<body>
+	<div id="nav">
+			<img src="https://grandcarrentalv1.b-cdn.net/wp-content/themes/grandcarrental/images/logo@2x_white.png">
+			<div id="nav-items">
+				<h3><a href="#">Home</a></h3>
+				<h3><a href="#">Car</a></h3>
+				<h3><a href="#">Booking</a></h3>
+				<h3><a href="#">Page</a></h3>
+				<h3><a href="#">Blog</a></h3>
+				<h3><a href="#">Shortcut</a></h3>
+				<h3><a href="#">Shop</a></h3>
+				<img id="img-2" src="https://cdn-icons-png.flaticon.com/128/545/545806.png">
+				
+			</div>
+		</div>
+
+	<div id="main">
+
+		
+<h1>Find Best<span> Car </span>Limousin</h1><br>
+<p>From as low as Rupees 500/- per day with limited time offer discounts</p>
+
+
+<div id="main-sl">
+<select id="slt">
+	<option>Any Brand</option>
+	<option>MAHINDRA </option>
+	<option>MARUTI SUZUKI </option>
+	<option>TATA </option>
+	<option>TOYOTA </option>
+	<option>HONDA </option>
+	<option>KIA </option>
+</select>
+<select id="slt2">
+	<option>Any Type</option>
+	<option>SUV </option>
+	<option>SEDAN </option>
+	<option>OFROAD</option>
+</select>
+<select id="slt3">
+	<option>Prize Low to High</option>
+	<option>Prize High to Low</option>
+</select>
+<button onclick="cardekho()">Search</button>
+</div>
+
+	</div>
+	<div id="main2">
+		<div id="text">
+			<h1>First Class Car Rental & Limousine Services</h1><br>
+			<p>We offer professional car rental & limousine services in our range of high-end vehicles</p>
+
+		</div>
+		<div id="brand">
+			<a href="mahindra.html" target="_self"><div id="box-1"><h2>Mahindar</h2></div></a>
+		    <a href="maruti.html" target="_self" ><div id="box-2"><h2>Maruti suzuki</h2></div></a>
+		    <a href="tata.html" target="_self"><div id="box-3"><h2>TATA</h2></div></a>
+
+		</div>
+		<div id="brand2">
+			<a href="toyota.html" target="_self"><div id="box2-1"><h2>toyota</h2></div></a>
+		<a href="honda.html" target="_self"><div id="box2-2"><h2>Honda</h2></div></a>
+		<a href="kia.html" target="_self"><div id="box2-3"><h2>Kia</h2></div></a>
+
+		</div>
+		<div id="text">
+			<h1>Find Car by Type</h1><br>
+			<p>We offer professional car rental & limousine services in our range of high-end vehicles</p>
+		</div>
+		<div id="brand3">
+	<a href="tata.html" target="_self"><div id="box3-1"><h2>SUV</h2></div></a>
+<a href="tata.html" target="_self"><div id="box3-2"><h2>SEDAN</h2></div></a>
+<a href="tata.html" target="_self"><div id="box3-3"><h2>OF ROAD</h2></div></a>
+
+		</div>
+		
+	</div>
+	<div id="main3">
+		<div id="main3-box">
+			<div id="text2">
+				<h1>Why Choose Us</h1><br>
+				<p>Explore our first class limousine & car rental services</p>
+			</div>
+			<div id="brand4">
+			<div id="box4">
+				<img src="C:\Users\HP\Desktop\HTML\Carlogo.jpeg">
+				<h2>Variety of Car Brands</h2>
+				<p>Lorem ipsum dolor sit amet, consectadipiscing elit. Aenean commodo ligula eget dolor.</p>
+			</div>
+		    <div id="box4">
+		    	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAAB5CAMAAAAK5OPDAAAAaVBMVEX///8DBgYAAADj4+Pw8PD19fX6+vro6Ojr6+vFxcWNjY3f39+1tbWFhYXMzMxTU1NHR0ednZ2WlpZZWVlnZ2c5OTkmJiZtbW2tra1+fn7V1dV2dnampqZgYGBAQEAREhIvLy8ZGRkfICBmwmcNAAAKi0lEQVR4nMVc2WKyOhCOIRuCKC617tb3f8iTkH0F++PpXHCRpslnMsw+AABQxQBgFQKAVhiQqiIAVzQep+44FeMMkaprr8vTbn0/vA6H3e2y6tuuovxvw3wk5qsl+EMuXQFvnC9N7ZZiHLh7VBITSGOyC4r5DLPzdnf/gjG9DuttRwUwtTdLYqKpYxgwIYQxNg/kPPJDGIOqP74kgkVEcvi2bQAh5XXS4+7ZVO6Z5e5L/Kamf6bRBMAe2zOg1DsD5zoyLMLHGcUE83/kD0YIoogQJh9YDqlxpsZRVa9/RvBYXItNy08rWIKKpRl1l0bOlvhNfqLouhk7oeC0Dkuxi1hiMj+5E3KYzGGjPgKU4PFowpK+x+P8IPnLKC6dnyEQZ8ivEwFxkHyc2XE++frlbShfsvtuv+q/a0Ftv9zvNl8hMAh/tkysA4aloy3V+mpLPl7mcZcRu3WEaHetGz7XI1x1132E6t7y3cSqbAKPT5QFmF7cXfiW6/4M8tRcbx4uPv9MSmLGlQXTeJzUT+gB2vIjHiF2XXuoHldGp/N4/r4kJsZOdnG+z60eBSTpfIHuP948FonUGTE8Hp+NxScFHmruLqJTNQ3QQGjpovqqkb6OQcfRtFod53H0/eNAOtE3EElUD4MKwi32eDxzZmOKCF+dJTclvs5Rs3dWWOKC7pP7gjEeZyvnkNpfIBJUvyyq/TiPc13DhK5hWD4wEzpOPIZxfLM/8RiKoulE7EsCDxgMS5t9sdkXDY8RHmcXC+n714iGo7KgNvxYXDtO8ROZxuPsaBZ6NP8EiW+7saCQx+M05HF1YIxpY2EwIuRBEgvpH+5NE1npo4IHhJwtCfNNJVDgcbY1kE4ThWSZtgbUMSemBx7Pv5PkaiCt5kDEyYgVuAR58ZN6/+UPYIYrYT8TJABas+YW5e0CacwYQa+NHMKal/n32SAB8K1AQdgBsSVxtjTqTOGgw6BjbIG1hnSaERIAvQb1ZJ4dp+27gn+Htp+BJBhdC3Q2zb/TnEY6/XN2eGZM4KRBtSTSrUX/bqOv/d/lUkTKPIQ/LGMXSF1j5KT0s8hSQ/qNHTBG9KFW32O9pfXvWODfmYBCpW9uzlfOUqtvr/NiGASU/DulU+BmFvEdk1kfJ3k8ZZ/U+ubetSknk769HhBrtyBlt6R4HN0/enOCWi2kcMa/I3hAKHS1EANEH9PrQzcnSElkeAVI76tRSB73+Qkd1Pz6c5BAI98iCFnav7MKRwh6po/p9kFIRnLCnsS6Res4YmIV+qXoPoqJqV3WTBlzQNp3qRgGUrIJ7vLr4Xp7Oi3bku9J6v50WrUFg3mlOYQm/Dvs2VZgOcZNREYOIfwR1mKavvWUW1acaI7ag6R/5/G45HD4yq2FdsYug6/0/eIjNGbSIusT7uRGXzTv30lnC2gOz3lOyAmwSMsshnT3puRW6ow4YCZsmvTv0EWhzzHLzgsNQpgwZS7BlMxSWNoe8E4K/p3AhM0tp6kOo5Wx+9CEU46ZtTTnpmIYjItyfm1YaLxzmcPJLdwQRnx+CaYscgdFNZvgYXMkoUQxDGWZJq9EEIri0FFcw2M4OSXj9xB1eZcw34INj4tzwntYPO5zFBqP7PUqnpJjBHUABzoYBMY8CGQmU+yUe1dCdkrAT8DOiV/9jlehf+cF8jp1dTn5Oy8mYk7Af++8RAjq5aRFZpHonRq8bJ/oOGxDd8VQ2Mu9AI/HkWKndW4RtIgYOJSaeDP6GhiS0gBuaOjfudpOmlqFAMEplAXPyNnaRuIi64/Vmsmxq/F8HmdK2eWtuUggxvBxIC+i27V0HqbCxxklYhhU8ngzRJ2LXt3K2xA+E1N6f8oib0JTfQZ+Dsjz76TpDp8lf+Xk5isOyZkrd8qrYEORtRE9idyGzGEoTJtijGBpbZVbRmv01lZZF+OgUlWJ241iGFLbIfA9amIK6vbSYDvkw+XNRU55XstLKSvkRKS2S/G4Evbj3kHXtvVIdGPCFM2dcE8SMQzpB2t5kZVxs5OS0Td+Tsq/0zEMbftqg26ukOo46Zcqz+Po+EeYfnxMXgzzrzB9gXyO+vRHmO4+jw+aRj3In2ECMhEukQBXjqPVH713uwKPL6fKp7loZTZ0MXn81E6S4zOSFj7Y4yfPv6un6Ls5Sem7Hif8O6Vr6gl2wZyk7YKWpPw76Th04/bTrKRtyBbkYxjNqJ05L2k7syNejtr370bt8XlJ2+OM5XicP8b8lplpqbfzMTkyc4J/NzPpgAEyuY04f0fH/OCZSfnBVxb5d1zXaC+PjsQL5iUdL2iEmtM4UMjj6Daq8dr3BAXp8wJYx1VwKoZhgpx4WY4/CU3+9dbF7vMvjI4/ncLYoR/3HYvTibIT+Ib4Es5+Vn2aOB0bqc8sxzOH+gAItxOzQ7IKD+7S03U8E4dxuqDYBxfjvq3O3OymaERi8vbJkzJxX6VLcC5/R3VmLfXmEbcIbRRSvbEOc8r1NPFxlM5RD/6dDCiW8gjNlwX1+C5aNOed8wOSkRWdR2gQDs4prOst51uUkpY73bOvOelubg1kUtrZfEsif8f8fMu5mJfCa3czeGkT7NttD15ZZjopo/NSXbEGeaihGc3f9W4gZ6jFrs+VPDBu7HRRTe0tnbwy+TunbCdfg6x5L+cpnJ9B5S+Ez/t6oMNPVHzcZ8SGznN+4yk1yGAsH0y2QZF4rna8EH0y+WCvYyFbg0xVMVYhb44u4fYx8RmbvMA3efNUjpoEOWrBVrqApiCDmstIUwJHlOJ/Raa+QG3p5KgJA2Fxhqh50P9RrMNo+kXusMQl7ospbluHMbU+k02sV2lW64CNVMTwMlKEa9ZP19Op2guE3ELXyXU9mLWX9eFlWPznudn3UTtASE5dz7ClFOBKnIe5DX1mRAu0SUUGqOnqVlBdn7OZdIdM/dNxvAbZmgfYlNF8sk7sQb197Tll6jPPH6+ng9wjH69B9mpGl/rOP1Z3eMzWjCbk0/9Un8kvyi8JNfIpW4OMPlzHGuSi8jXIjtYhn6337UGu9rnUf2fEyEfqolGhb4OqoiPZhGdzw8KY+Vz9+EX13zlbmvqnwS6wNci2z2ZgOGy7EWaus2dRLbSMYdga5Hz/nQU1az8CLfeSDKk7nTnTsU2bTPtE38aaEsXNYvNgy0x9ptdjuregZupvuQ8yqdhjGtexMkcBEjB3H9ARJ7b0dC4Y7XXD347zOEO/FM32ur3Tf9fO2FfWkzwmAvI1yN7d8Qeerf/uVWOUbMvyerYm9pjO06e4JyjoMU2f2WiPqey/aefo5yQT+83LMtPGNkTN5cKD9Wbf666a3LPs2k8scLaGIe3I4/rf+oOBF5ZgBGT6W0gcw4gCCrZZh/6+j3qJ+BI07qOm4ZG82UfN/T56/V2/+RmZ+5rC46PfOfA/pkB+0ZeP3AbqcnvptB7T6MzwW98vuNcIy/Xf+FZA+LGDsGlQN8Nou48zOz5fp37noeNOCAqXCExHMYTd7y5M5idPXjBMryPfw3jst2dM5NkQuXTlX0fB9k3fl3UA099X4POb7pr7bshuWQuTY7gvIV/8XlLb253ZMqPjkkaEpxNFTSXGNPl9FSyiG/H8cCjTH/wfZ6ux0Io6qk8AAAAASUVORK5CYII=">
+		    	<h1>Best Rate Guarantee</h1>
+		    	<p>Lorem ipsum dolor sit amet, consectadipiscing elit. Aenean commodo ligula eget dolor.</p>
+		    </div>
+		    <div id="box4">
+		    	<img src="data:image/png;base64,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">
+		    	<h1>Awesome Customer Support</h1>
+		    	<p>Lorem ipsum dolor sit amet, consectadipiscing elit. Aenean commodo ligula eget dolor.</p>
+		    </div>
+
+		</div>
+
+		</div>
+		<div id="main3-box2">
+			<div id="brand5">
+			<div id="box5">
+				<h2>About Us</h2><br>
+				<p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience.</p><br><br>
+				<img src="https://grandcarrentalv1.b-cdn.net/wp-content/themes/grandcarrental/images/logo@2x_white.png">
+			</div>
+		    <div id="box5">
+		    	<h2>Contact Us</h2><br>
+		    	<p>88943-81093</p><br>
+		    	<p>main street Palampur</p><br>
+		    	<p>mon - sat 8.00AM - 9.00PM Sunday closed</p>
+		    </div>
+		    <div id="box5">
+		    	<h2>NewsLetter</h2><br>
+		    	<p>Don't miss a thing! Sign up to receive daily deals </p><br>
+		    	<input type="email" name="mail" placeholder="your Gmail"><br><br>
+		    	<button>subscrible</button>
+		    </div>
+
+		</div>
+		</div>
+		<div id="main3-box3"></div>
+		
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="rental.js">
+	
+	</script>
+
+</body>
+</html>
